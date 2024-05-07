@@ -10,9 +10,8 @@ defined('TYPO3') or die();
     mod.web_ts.menu.function.TYPO3\CMS\Tstemplate\Controller\TypoScriptTemplateConstantEditorModuleFunctionController = 0
     mod.web_ts.menu.function.TYPO3\CMS\Tstemplate\Controller\TypoScriptTemplateInformationModuleFunctionController = 0
 
-    # Hide TSconfig and tsconfig_includes fields when editing pages
+    # Hide TSconfig when editing pages
     TCEFORM.pages.TSconfig.disabled=1
-    TCEFORM.pages.tsconfig_includes.disabled=1
 ');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
