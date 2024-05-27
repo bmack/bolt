@@ -65,6 +65,8 @@ extension manager.
   the site extension the single entry point of your Site configuration that provides all site specific
   settings!
 
+* Optional (v12 and up): Use `typoScriptTemplatePath` to include TypoScript from a custom defined path.
+  Useful if there are plenty of sites that should be server using a single extension.
 
 ## Disabled Backend settings
 

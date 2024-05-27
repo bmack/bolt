@@ -43,13 +43,18 @@ final class AddTypoScriptFromSiteExtensionEvent
             return;
         }
 
-        $constantsFile = $package->getPackagePath() . 'Configuration/TypoScript/constants.typoscript';
-        $setupFile = $package->getPackagePath() . 'Configuration/TypoScript/setup.typoscript';
+        $typoScriptPath = $package->getPackagePath() . 'Configuration/TypoScript/';
+        if ($site->getConfiguration()['typoScriptTemplatePath'] ?? false) {
+            $typoScriptPath = $package->getPackagePath() . rtrim($site->getConfiguration()['typoScriptTemplatePath'], '/') . '/';
+        }
+
+        $constantsFile = $typoScriptPath . 'constants.typoscript';
+        $setupFile = $typoScriptPath . 'setup.typoscript';
         if (!file_exists($constantsFile)) {
-            $constantsFile = $package->getPackagePath() . 'Configuration/TypoScript/constants.txt';
+            $constantsFile = $typoScriptPath . 'constants.txt';
         }
         if (!file_exists($setupFile)) {
-            $setupFile = $package->getPackagePath() . 'Configuration/TypoScript/setup.txt';
+            $setupFile = $typoScriptPath . 'setup.txt';
         }
 
         $constants = null;

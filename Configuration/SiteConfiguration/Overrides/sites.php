@@ -17,6 +17,16 @@ $GLOBALS['SiteConfiguration']['site']['columns']['sitePackage'] = [
         'itemsProcFunc' => \B13\Bolt\Configuration\PackageHelper::class . '->getSiteListForSiteModule',
     ],
 ];
+
+$GLOBALS['SiteConfiguration']['site']['columns']['typoScriptTemplatePath'] = [
+    'label' => 'Custom path to the TypoScript template',
+    'description' => '[EXT:bolt] Defined a custom path to the TypoScript template to be included instead of the default "Configuration/TypoScript/".',
+    'config' => [
+        'type' => 'input',
+    ],
+];
+
 $GLOBALS['SiteConfiguration']['site']['palettes']['default']['showitem'] .= ',
     sitePackage,
+    typoScriptTemplatePath,
 ';
