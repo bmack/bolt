@@ -1,0 +1,6 @@
+includes:
+  - ../vendor/saschaegerer/phpstan-typo3/extension.neon
+parameters:
+  level: 5
+  paths:
+    - %currentWorkingDirectory%/Classes

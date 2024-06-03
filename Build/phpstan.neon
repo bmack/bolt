@@ -1,0 +1,11 @@
+includes:
+  - ../vendor/saschaegerer/phpstan-typo3/extension.neon
+parameters:
+  level: 5
+  paths:
+    - %currentWorkingDirectory%/Classes
+  excludePaths:
+    - %currentWorkingDirectory%/Classes/TypoScript/Loader.php
+  ignoreErrors:
+    - '#.*unknown class TYPO3\\CMS\\Core\\Configuration\\Event\\ModifyLoadedPageTsConfigEvent.#'
+    - '#.*invalid type TYPO3\\CMS\\Core\\Configuration\\Event\\ModifyLoadedPageTsConfigEvent.#'

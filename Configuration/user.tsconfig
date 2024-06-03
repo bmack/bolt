@@ -1,0 +1,3 @@
+# default user ts config for v13
+# Hide tstemplate "Edit TypoScript record" and "Constant Editor" in core v12
+options.hideModules := addToList(web_typoscript_infomodify, web_typoscript_constanteditor)
